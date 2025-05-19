@@ -1,0 +1,2 @@
+D:/bracu_chicken/android/app/.cxx/RelWithDebInfo/1g59326m/x86_64/CMakeFiles/edit_cache.dir
+D:/bracu_chicken/android/app/.cxx/RelWithDebInfo/1g59326m/x86_64/CMakeFiles/rebuild_cache.dir
