@@ -12,7 +12,7 @@ Bracu Chicken is a 2D endless runner game built with Flutter and the Flame game 
 - Responsive controls (swipe and tap)
 
 ## Screenshots
-*Add your screenshots here!*
+*screenshots will be added here later!*
 
 ## Getting Started
 
@@ -23,7 +23,7 @@ Bracu Chicken is a 2D endless runner game built with Flutter and the Flame game 
 ### Installation
 1. **Clone the repository:**
    ```sh
-   git clone <your-repo-url>
+   git clone https://github.com/Onnesok/bracu_chicken.git
    cd bracu_chicken
    ```
 2. **Get dependencies:**
@@ -141,4 +141,4 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 ## Acknowledgements
 - [Flame Engine](https://flame-engine.org/)
 - [Flutter](https://flutter.dev/)
-- Audio and some assets from [Tim Beek](https://timbeek.itch.io/) and [mikiz](https://mikiz.itch.io/)
+- Audio and some assets from [Tim Beek](https://timbeek.itch.io/),  [mikiz](https://mikiz.itch.io/) and [Arks](https://arks.itch.io/)
