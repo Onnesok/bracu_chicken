@@ -38,17 +38,74 @@ Bracu Chicken is a 2D endless runner game built with Flutter and the Flame game 
 
 ## Project Structure
 
-- `lib/`
-  - `main.dart` - App entry point
-  - `game/` - Core game logic (game loop, enemy manager, player, etc.)
-  - `screens/` - UI screens (welcome, game over, level select, character select)
-  - `widgets/` - Custom widgets (pause button, menus, overlays)
-  - `models/` - Data models (e.g., `enemy_data.dart`)
-  - `providers/` - State management (score, music, level, background)
-- `assets/`
-  - `images/` - Sprites, backgrounds, parallax layers
-  - `audio/` - Sound effects and background music
-  - `Icon/` - App icons
+```
+bracu_chicken/
+│
+├── lib/
+│   ├── main.dart                # App entry point, sets up providers and launches the game
+│   │
+│   ├── game/                    # Core game logic and components
+│   │   ├── bracu_chicken_game.dart   # Main game class, handles game loop, parallax, and state
+│   │   ├── enemy_manager.dart        # Spawns and manages enemies
+│   │   ├── enemy.dart                # Enemy component and behavior
+│   │   └── chicken.dart              # Player character logic and animation
+│   │
+│   ├── screens/                 # UI/game screens
+│   │   ├── welcome_screen.dart         # Main menu and welcome screen
+│   │   ├── game_over_screen.dart       # Game over UI
+│   │   ├── level_screen.dart           # Level/difficulty selection
+│   │   └── character_selection_screen.dart # Character selection UI
+│   │
+│   ├── widgets/                 # Reusable UI widgets and overlays
+│   │   ├── pause_button.dart            # Pause button widget
+│   │   ├── pause_menu_bracu.dart        # Pause menu overlay
+│   │   ├── settings_menu_bracu.dart     # Settings menu overlay
+│   │   └── loading_overlay.dart         # Loading overlay widget
+│   │
+│   ├── models/                  # Data models
+│   │   └── enemy_data.dart              # Enemy data structure
+│   │
+│   └── providers/               # State management (using Provider)
+│       ├── score_provider.dart          # Score and high score logic
+│       ├── music_provider.dart          # Music and sound settings
+│       ├── level_provider.dart          # Level/difficulty state
+│       └── background_provider.dart     # Background selection state
+│
+├── assets/
+│   ├── images/                  # All game images and sprites
+│   │   ├── cat_girl/                    # Cat girl enemy sprites
+│   │   ├── witch/                       # Witch enemy sprites
+│   │   ├── Bat/, Rino/, AngryPig/       # Other enemy sprites
+│   │   ├── ChickBoy/, chicken/          # Player character sprites
+│   │   └── parallax/                    # Parallax backgrounds
+│   │       ├── PineForestParallax/      # Pine forest background layers
+│   │       └── forest1/                 # Forest 1 background layers
+│   │       └── plx-*.png                # Classic background layers
+│   ├── audio/                   # Sound effects and background music
+│   │   ├── 8BitPlatformerLoop.wav       # Main background music
+│   │   ├── jump14.wav, hurt7.wav        # Sound effects
+│   │   └── readme.md                    # Audio credits and licenses
+│   └── Icon/                    # App icons for mobile/desktop
+│
+├── test/
+│   └── widget_test.dart         # Example widget test
+│
+├── pubspec.yaml                 # Project configuration, dependencies, and asset registration
+└── README.md                    # Project documentation (this file)
+```
+
+---
+
+### Directory Highlights
+
+- **lib/game/**: All core game logic, including the main game loop, player, and enemy logic.
+- **lib/screens/**: All major UI screens, such as menus and overlays.
+- **lib/widgets/**: Reusable UI components and overlays for pause, settings, and loading.
+- **lib/providers/**: State management for score, music, level, and background.
+- **assets/images/parallax/**: Contains all parallax background layers, organized by theme.
+- **assets/audio/**: Contains all music and sound effects, with credits in `readme.md`.
+
+---
 
 ## Assets
 - **Images:**
