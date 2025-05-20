@@ -146,7 +146,7 @@ asian_chicken/
 Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
-*Specify your license here.*
+*[See license here.](https://github.com/Onnesok/asian_chicken?tab=Apache-2.0-1-ov-file)*
 
 ## Acknowledgements
 - [Flame Engine](https://flame-engine.org/)
