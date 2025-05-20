@@ -4,11 +4,11 @@ import 'package:flame/components.dart';
 
 import '/game/enemy.dart';
 import '/models/enemy_data.dart';
-import 'bracu_chicken_game.dart';
+import 'asian_chicken_game.dart';
 
 // This class is responsible for spawning random enemies at certain
 // interval of time depending upon players current score.
-class EnemyManager extends Component with HasGameReference<BracuChickenGame> {
+class EnemyManager extends Component with HasGameReference<AsianChickenGame> {
   // A list to hold data for all the enemies.
   final List<EnemyData> _data = [];
 
@@ -27,9 +27,25 @@ class EnemyManager extends Component with HasGameReference<BracuChickenGame> {
 
   void setDifficulty(String difficulty, {double enemySpeedMultiplier = 1.0}) {
     _enemySpeedMultiplier = enemySpeedMultiplier;
-    // No-op or reset timer to a default value if needed
+    // Adjust spawn interval based on difficulty
+    if (difficulty == 'easy') {
+      _minInterval = 1.2;
+      _maxInterval = 2.0;
+    } else if (difficulty == 'medium') {
+      _minInterval = 0.9;
+      _maxInterval = 1.5;
+    } else if (difficulty == 'hard') {
+      _minInterval = 0.6;
+      _maxInterval = 1.1;
+    } else if (difficulty == 'asia') {
+      _minInterval = 0.4;
+      _maxInterval = 0.8;
+    } else {
+      _minInterval = 1.0;
+      _maxInterval = 1.5;
+    }
     _timer.stop();
-    _timer = Timer(_minInterval, repeat: false, onTick: spawnRandomEnemy);
+    _timer = Timer(_randomInterval(), repeat: false, onTick: spawnRandomEnemy);
     _timer.start();
   }
 
@@ -39,7 +55,6 @@ class EnemyManager extends Component with HasGameReference<BracuChickenGame> {
 
   // This method is responsible for spawning a random enemy.
   void spawnRandomEnemy() {
-    print('Spawning enemy');
     /// Generate a random index within [_data] and get an [EnemyData].
     final randomIndex = _random.nextInt(_data.length);
     final baseData = _data.elementAt(randomIndex);

@@ -1,10 +1,10 @@
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
-import '../game/bracu_chicken_game.dart';
+import '../game/asian_chicken_game.dart';
 import 'package:flame/game.dart';
 
 class WelcomeScreen extends StatefulWidget {
-  final BracuChickenGame game;
+  final AsianChickenGame game;
   static const String id = 'WelcomeScreen';
   const WelcomeScreen({Key? key, required this.game}) : super(key: key);
 
@@ -84,7 +84,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       Icon(Icons.egg, size: 40, color: Colors.orange.shade400),
                       const SizedBox(height: 8),
                       const Text(
-                        'Welcome to Bracu Chicken!',
+                        'Welcome to Asian Chicken!',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.brown,

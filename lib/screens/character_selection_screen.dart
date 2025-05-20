@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../game/bracu_chicken_game.dart';
+import '../game/asian_chicken_game.dart';
 import 'package:flame/sprite.dart';
 import 'package:flame/widgets.dart';
 import 'package:flame/flame.dart';
 import 'package:flame/components.dart';
 
 class CharacterSelectionScreen extends StatefulWidget {
-  final BracuChickenGame game;
+  final AsianChickenGame game;
   static const String id = 'CharacterSelectionScreen';
   const CharacterSelectionScreen({Key? key, required this.game}) : super(key: key);
 

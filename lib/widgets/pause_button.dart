@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import '../game/bracu_chicken_game.dart';
+import '../game/asian_chicken_game.dart';
 import 'package:flame_audio/flame_audio.dart';
 
 class PauseButton extends StatelessWidget {
-  final BracuChickenGame game;
+  final AsianChickenGame game;
   static const String id = 'PauseButton';
   const PauseButton({Key? key, required this.game}) : super(key: key);
 

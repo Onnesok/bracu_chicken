@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import '../game/bracu_chicken_game.dart';
+import '../game/asian_chicken_game.dart';
 import 'package:provider/provider.dart';
 import '../providers/level_provider.dart';
 import 'package:flame/game.dart';
 
 class LevelScreen extends StatelessWidget {
-  final BracuChickenGame game;
+  final AsianChickenGame game;
   static const String id = 'LevelScreen';
   const LevelScreen({Key? key, required this.game}) : super(key: key);
 
@@ -61,7 +61,7 @@ class LevelScreen extends StatelessWidget {
                       const SizedBox(height: 8),
                       _levelButton(context, 'Hard', Colors.orange.shade400, Colors.brown, 'hard', selectedLevel),
                       const SizedBox(height: 8),
-                      _levelButton(context, 'Bracu', Colors.red.shade700, Colors.white, 'bracu', selectedLevel),
+                      _levelButton(context, 'Asia', Colors.red.shade700, Colors.white, 'asia', selectedLevel),
                     ],
                   ),
                 ),

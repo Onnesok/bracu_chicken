@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flame/game.dart';
-import 'game/bracu_chicken_game.dart';
+import 'game/asian_chicken_game.dart';
 import 'screens/game_over_screen.dart';
 import 'widgets/pause_button.dart';
 import 'widgets/pause_menu_bracu.dart';
@@ -29,7 +29,7 @@ void main() async {
   final backgroundProvider = BackgroundProvider();
   await backgroundProvider.loadBackground();
 
-  final game = BracuChickenGame();
+  final game = AsianChickenGame();
 
   runApp(
     MultiProvider(
@@ -47,29 +47,29 @@ void main() async {
             game: game,
             overlayBuilderMap: {
               'WelcomeScreen': (context, game) {
-                return WelcomeScreen(game: game as BracuChickenGame);
+                return WelcomeScreen(game: game as AsianChickenGame);
               },
               'LevelScreen': (context, game) {
-                return LevelScreen(game: game as BracuChickenGame);
+                return LevelScreen(game: game as AsianChickenGame);
               },
               'CharacterSelectionScreen': (context, game) {
-                return CharacterSelectionScreen(game: game as BracuChickenGame);
+                return CharacterSelectionScreen(game: game as AsianChickenGame);
               },
               'GameOver': (context, gameInstance) {
-                final bracuGame = gameInstance as BracuChickenGame;
+                final asianGame = gameInstance as AsianChickenGame;
                 WidgetsBinding.instance.addPostFrameCallback((_) {
-                  Provider.of<ScoreProvider>(context, listen: false).setScore(bracuGame.score);
+                  Provider.of<ScoreProvider>(context, listen: false).setScore(asianGame.score);
                 });
-                return GameOverScreen(game: bracuGame);
+                return GameOverScreen(game: asianGame);
               },
               'PauseButton': (context, gameInstance) {
-                return PauseButton(game: gameInstance as BracuChickenGame);
+                return PauseButton(game: gameInstance as AsianChickenGame);
               },
               'PauseMenu': (context, gameInstance) {
-                return PauseMenuBracu(game: gameInstance as BracuChickenGame);
+                return PauseMenuBracu(game: gameInstance as AsianChickenGame);
               },
               'SettingsMenuBracu': (context, gameInstance) {
-                return SettingsMenuBracu(game: gameInstance as BracuChickenGame);
+                return SettingsMenuBracu(game: gameInstance as AsianChickenGame);
               },
               'Loading': (_, __) => LoadingOverlay(),
             },

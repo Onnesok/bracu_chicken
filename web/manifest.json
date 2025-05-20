@@ -1,11 +1,11 @@
 {
-    "name": "bracu_chicken",
-    "short_name": "bracu_chicken",
+    "name": "asian_chicken",
+    "short_name": "asian_chicken",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "Bracu chicken is a chicken running 2d game....",
+    "description": "A new Flutter project.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

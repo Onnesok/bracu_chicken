@@ -1,2 +1,0 @@
-D:/bracu_chicken/android/app/.cxx/Debug/3k0725z3/armeabi-v7a/CMakeFiles/edit_cache.dir
-D:/bracu_chicken/android/app/.cxx/Debug/3k0725z3/armeabi-v7a/CMakeFiles/rebuild_cache.dir

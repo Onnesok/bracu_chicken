@@ -1,6 +1,6 @@
-# Bracu Chicken
+# Asian Chicken
 
-Bracu Chicken is a 2D endless runner game built with Flutter and the Flame game engine. Guide your chicken (and other characters) through a side-scrolling world, avoid obstacles, and compete for the highest score!
+Asian Chicken is a 2D endless runner game built with Flutter and the Flame game engine. Guide your chicken (and other characters) through a side-scrolling world, avoid obstacles, and compete for the highest score!
 
 ## Features
 - Multiple playable characters
@@ -23,8 +23,8 @@ Bracu Chicken is a 2D endless runner game built with Flutter and the Flame game 
 ### Installation
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/Onnesok/bracu_chicken.git
-   cd bracu_chicken
+   git clone https://github.com/Onnesok/asian_chicken.git
+   cd asian_chicken
    ```
 2. **Get dependencies:**
    ```sh
@@ -39,13 +39,13 @@ Bracu Chicken is a 2D endless runner game built with Flutter and the Flame game 
 ## Project Structure
 
 ```
-bracu_chicken/
+asian_chicken/
 │
 ├── lib/
 │   ├── main.dart                # App entry point, sets up providers and launches the game
 │   │
 │   ├── game/                    # Core game logic and components
-│   │   ├── bracu_chicken_game.dart   # Main game class, handles game loop, parallax, and state
+│   │   ├── asian_chicken_game.dart   # Main game class, handles game loop, parallax, and state
 │   │   ├── enemy_manager.dart        # Spawns and manages enemies
 │   │   ├── enemy.dart                # Enemy component and behavior
 │   │   └── chicken.dart              # Player character logic and animation

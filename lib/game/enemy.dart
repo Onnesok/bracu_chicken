@@ -2,12 +2,12 @@ import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
 
 import '/models/enemy_data.dart';
-import 'bracu_chicken_game.dart';
+import 'asian_chicken_game.dart';
 import 'chicken.dart';
 
 // This represents an enemy in the game world.
 class Enemy extends SpriteAnimationComponent
-    with CollisionCallbacks, HasGameReference<BracuChickenGame> {
+    with CollisionCallbacks, HasGameReference<AsianChickenGame> {
   // The data required for creation of this enemy.
   final EnemyData enemyData;
 

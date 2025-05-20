@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/music_provider.dart';
-import '../game/bracu_chicken_game.dart';
+import '../game/asian_chicken_game.dart';
 import '../providers/background_provider.dart';
 import 'package:flame/flame.dart';
 import 'package:flame/sprite.dart';
@@ -9,7 +9,7 @@ import 'package:flame/components.dart';
 import '../main.dart';
 
 class SettingsMenuBracu extends StatefulWidget {
-  final BracuChickenGame game;
+  final AsianChickenGame game;
   static const String id = 'SettingsMenuBracu';
   const SettingsMenuBracu({Key? key, required this.game}) : super(key: key);
 
@@ -170,7 +170,7 @@ class _SettingsMenuBracuState extends State<SettingsMenuBracu> {
 }
 
 class BackgroundSelectionDialog extends StatelessWidget {
-  final BracuChickenGame game;
+  final AsianChickenGame game;
   final Future<void> Function(String) onBackgroundSelected;
   BackgroundSelectionDialog({required this.game, required this.onBackgroundSelected, Key? key}) : super(key: key);
   final List<Map<String, String>> backgrounds = const [

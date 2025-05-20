@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import '../game/bracu_chicken_game.dart';
+import '../game/asian_chicken_game.dart';
 import 'package:flame_audio/flame_audio.dart';
 import '../providers/music_provider.dart';
 import 'package:provider/provider.dart';
 
 class PauseMenuBracu extends StatelessWidget {
-  final BracuChickenGame game;
+  final AsianChickenGame game;
   static const String id = 'PauseMenu';
   const PauseMenuBracu({Key? key, required this.game}) : super(key: key);
 
