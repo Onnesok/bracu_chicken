@@ -12,7 +12,16 @@ Asian Chicken is a 2D endless runner game built with Flutter and the Flame game 
 - Responsive controls (swipe and tap)
 
 ## Screenshots
-*screenshots will be added here later!*
+
+Game screenshots can be found in the [assets/Asian chicken directory on GitHub](https://github.com/Onnesok/asian_chicken/tree/main/assets/Asian%20chicken).
+
+Below are some example screenshots from the game:
+
+| ![1](https://github.com/Onnesok/asian_chicken/raw/main/assets/Asian%20chicken/1.jpg) | ![2](https://github.com/Onnesok/asian_chicken/raw/main/assets/Asian%20chicken/2.jpg) | ![3](https://github.com/Onnesok/asian_chicken/raw/main/assets/Asian%20chicken/3.jpg) | ![4](https://github.com/Onnesok/asian_chicken/raw/main/assets/Asian%20chicken/4.jpg) |
+|---|---|---|---|
+| ![5](https://github.com/Onnesok/asian_chicken/raw/main/assets/Asian%20chicken/5.jpg) | ![6](https://github.com/Onnesok/asian_chicken/raw/main/assets/Asian%20chicken/6.jpg) | ![7](https://github.com/Onnesok/asian_chicken/raw/main/assets/Asian%20chicken/7.jpg) | ![8](https://github.com/Onnesok/asian_chicken/raw/main/assets/Asian%20chicken/8.jpg) |
+
+> For more screenshots, see the [assets/Asian chicken folder](https://github.com/Onnesok/asian_chicken/tree/main/assets/Asian%20chicken) in the repository.
 
 ## Getting Started
 
@@ -81,6 +90,7 @@ asian_chicken/
 │   │       ├── PineForestParallax/      # Pine forest background layers
 │   │       └── forest1/                 # Forest 1 background layers
 │   │       └── plx-*.png                # Classic background layers
+│   │
 │   ├── audio/                   # Sound effects and background music
 │   │   ├── 8BitPlatformerLoop.wav       # Main background music
 │   │   ├── jump14.wav, hurt7.wav        # Sound effects
