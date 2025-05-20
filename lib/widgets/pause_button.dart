@@ -23,6 +23,7 @@ class PauseButton extends StatelessWidget {
                 game.pauseEngine();
                 game.overlays.add('PauseMenu');
                 game.overlays.remove(PauseButton.id);
+                game.overlays.remove('ControlButtons');
               },
               child: const SizedBox(
                 width: 56,

@@ -26,23 +26,27 @@ class EnemyManager extends Component with HasGameReference<AsianChickenGame> {
   }
 
   void setDifficulty(String difficulty, {double enemySpeedMultiplier = 1.0}) {
-    _enemySpeedMultiplier = enemySpeedMultiplier;
-    // Adjust spawn interval based on difficulty
+    // Make levels easier: increase spawn intervals and reduce speed
     if (difficulty == 'easy') {
-      _minInterval = 1.2;
-      _maxInterval = 2.0;
+      _minInterval = 2.0;
+      _maxInterval = 3.0;
+      _enemySpeedMultiplier = 0.7;
     } else if (difficulty == 'medium') {
-      _minInterval = 0.9;
-      _maxInterval = 1.5;
+      _minInterval = 1.5;
+      _maxInterval = 2.5;
+      _enemySpeedMultiplier = 0.85;
     } else if (difficulty == 'hard') {
-      _minInterval = 0.6;
-      _maxInterval = 1.1;
+      _minInterval = 1.0;
+      _maxInterval = 1.7;
+      _enemySpeedMultiplier = 1.0;
     } else if (difficulty == 'asia') {
-      _minInterval = 0.4;
-      _maxInterval = 0.8;
+      _minInterval = 0.7;
+      _maxInterval = 1.2;
+      _enemySpeedMultiplier = 1.2;
     } else {
       _minInterval = 1.0;
       _maxInterval = 1.5;
+      _enemySpeedMultiplier = 1.0;
     }
     _timer.stop();
     _timer = Timer(_randomInterval(), repeat: false, onTick: spawnRandomEnemy);
@@ -67,7 +71,7 @@ class EnemyManager extends Component with HasGameReference<AsianChickenGame> {
       nFrames: baseData.nFrames,
       stepTime: baseData.stepTime,
       textureSize: baseData.textureSize,
-      speedX: baseData.speedX * gameSpeed * _enemySpeedMultiplier,
+      speedX: (baseData.speedX * gameSpeed * _enemySpeedMultiplier).clamp(100, double.infinity),
       canFly: baseData.canFly,
     );
     final enemy = Enemy(enemyData);

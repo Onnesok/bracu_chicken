@@ -242,6 +242,7 @@ class AsianChickenGame extends FlameGame with PanDetector, HasCollisionDetection
     overlays.add('GameOver');
     pauseEngine();
     overlays.remove('PauseButton');
+    overlays.remove('ControlButtons');
   }
 
   Future<void> reset() async {
@@ -273,6 +274,7 @@ class AsianChickenGame extends FlameGame with PanDetector, HasCollisionDetection
     // Resume the engine
     resumeEngine();
     overlays.add('PauseButton');
+    overlays.add('ControlButtons');
   }
 
   @override
@@ -331,17 +333,22 @@ class AsianChickenGame extends FlameGame with PanDetector, HasCollisionDetection
     _selectedLevel = value;
     saveSelectedLevel(value);
     // print('Difficulty set to: $difficulty');
+    double parallaxSpeed = 16;
     if (difficulty == 'easy') {
-      speedMultiplier = 1.0;
+      speedMultiplier = 0.7;
+      parallaxSpeed = 16;
     } else if (difficulty == 'medium') {
-      speedMultiplier = 1.3;
+      speedMultiplier = 0.85;
+      parallaxSpeed = 22;
     } else if (difficulty == 'hard') {
-      speedMultiplier = 1.7;
+      speedMultiplier = 1.0;
+      parallaxSpeed = 28;
     } else if (difficulty == 'asia') {
-      speedMultiplier = 2.2;
+      speedMultiplier = 1.2;
+      parallaxSpeed = 36;
     }
     if (parallax != null) {
-      parallaxBaseVelocity = Vector2(36 * speedMultiplier, 0);
+      parallaxBaseVelocity = Vector2(parallaxSpeed, 0);
       // Update the parallax base velocity
       if (parallax!.parallax != null) {
         parallax!.parallax!.baseVelocity.setFrom(parallaxBaseVelocity);
@@ -478,6 +485,16 @@ class AsianChickenGame extends FlameGame with PanDetector, HasCollisionDetection
     add(scoreText);
     // Adjust enemy speed if needed
     enemyManager?.setDifficulty(difficulty, enemySpeedMultiplier: enemySpeedMultiplier);
+  }
+
+  void handleAddButton() {
+    // Example: Add an obstacle at a fixed position
+    final obstacle = Obstacle(
+      position: Vector2(size.x - 100, size.y - 60),
+      size: Vector2(48, 48),
+      speed: 200,
+    );
+    add(obstacle);
   }
 }
 

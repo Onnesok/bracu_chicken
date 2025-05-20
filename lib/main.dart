@@ -15,6 +15,7 @@ import 'screens/level_screen.dart';
 import 'screens/character_selection_screen.dart';
 import 'providers/level_provider.dart';
 import 'providers/background_provider.dart';
+import 'widgets/control_buttons.dart';
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
@@ -64,6 +65,16 @@ void main() async {
               },
               'PauseButton': (context, gameInstance) {
                 return PauseButton(game: gameInstance as AsianChickenGame);
+              },
+              'ControlButtons': (context, gameInstance) {
+                final game = gameInstance as AsianChickenGame;
+                return ControlButtons(
+                  game: game,
+                  onJump: () => game.chicken?.jump(),
+                  onLeft: () => game.chicken?.moveLeft(),
+                  onRight: () => game.chicken?.moveRight(),
+                  onDown: () => game.chicken?.groundPound(),
+                );
               },
               'PauseMenu': (context, gameInstance) {
                 return PauseMenuBracu(game: gameInstance as AsianChickenGame);
