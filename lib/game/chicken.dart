@@ -177,12 +177,12 @@ class Chicken extends SpriteAnimationGroupComponent<ChickenAnimationStates>
   void reset() {
     if (characterKey == 'classic' || characterKey == 'black' || characterKey == 'dark_brown') {
       anchor = Anchor.bottomCenter;
-      position = Vector2(32 + 24, gameRef.size.y - 60 + 16); // move slightly under ground to hide extra pixels
+      position = Vector2(gameRef.size.x / 2-80, gameRef.size.y - 60 + 16); // center horizontally
       size = Vector2(48, 48);
       yMax = position.y;
     } else if (characterKey == 'chickboy') {
       anchor = Anchor.bottomLeft;
-      position = Vector2(32, gameRef.size.y - 48); // feet on the ground
+      position = Vector2(gameRef.size.x / 2 - 80, gameRef.size.y - 48); // center horizontally
       size = Vector2(64, 64);
       yMax = position.y;
     }

@@ -16,6 +16,7 @@ import 'screens/character_selection_screen.dart';
 import 'providers/level_provider.dart';
 import 'providers/background_provider.dart';
 import 'widgets/control_buttons.dart';
+import 'providers/control_buttons_provider.dart';
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
@@ -39,6 +40,7 @@ void main() async {
         ChangeNotifierProvider(create: (_) => MusicProvider()..loadMusicSetting()),
         ChangeNotifierProvider(create: (_) => LevelProvider()..loadLevel()),
         ChangeNotifierProvider<BackgroundProvider>.value(value: backgroundProvider),
+        ChangeNotifierProvider(create: (_) => ControlButtonsProvider()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

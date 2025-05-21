@@ -113,6 +113,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                           widget.game.overlays.remove(WelcomeScreen.id);
                           widget.game.resumeEngine();
                           widget.game.overlays.add('PauseButton');
+                          widget.game.overlays.add('ControlButtons');
                         },
                         child: Row(
                           mainAxisSize: MainAxisSize.min,

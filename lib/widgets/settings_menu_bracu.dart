@@ -7,6 +7,8 @@ import 'package:flame/flame.dart';
 import 'package:flame/sprite.dart';
 import 'package:flame/components.dart';
 import '../main.dart';
+import '../providers/control_buttons_provider.dart';
+import '../screens/button_settings_screen.dart';
 
 class SettingsMenuBracu extends StatefulWidget {
   final AsianChickenGame game;
@@ -134,6 +136,28 @@ class _SettingsMenuBracuState extends State<SettingsMenuBracu> {
                             Icon(Icons.image, color: Colors.brown),
                             SizedBox(width: 8),
                             Text('Background'),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      ElevatedButton(
+                        style: chickenButtonStyle(color: Colors.purple.shade300),
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(builder: (_) => ButtonSettingsScreen()),
+                          );
+                        },
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: const [
+                            Icon(Icons.gamepad, color: Colors.brown),
+                            SizedBox(width: 8),
+                            Text('Button Settings'),
                           ],
                         ),
                       ),

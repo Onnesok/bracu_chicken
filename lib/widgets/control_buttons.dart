@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import '../game/asian_chicken_game.dart';
+import 'package:provider/provider.dart';
+import '../providers/control_buttons_provider.dart';
 
 class ControlButtons extends StatelessWidget {
   final AsianChickenGame game;
@@ -19,52 +21,58 @@ class ControlButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controlProvider = Provider.of<ControlButtonsProvider>(context);
+    final screenSize = MediaQuery.of(context).size;
     return Stack(
       children: [
-        // Left/Right (left corner)
-        Positioned(
-          left: 32,
-          bottom: 48,
-          child: Row(
-            children: [
-              _modernButton(
-                icon: Icons.keyboard_arrow_left,
-                onPressed: onLeft,
-                tooltip: 'Left',
-                color: Colors.white.withOpacity(0.4),
-              ),
-              const SizedBox(width: 24),
-              _modernButton(
-                icon: Icons.keyboard_arrow_right,
-                onPressed: onRight,
-                tooltip: 'Right',
-                color: Colors.white.withOpacity(0.4),
-              ),
-            ],
+        // Left Button
+        if (controlProvider.leftEnabled)
+          Positioned(
+            left: controlProvider.leftPosition.dx * screenSize.width - 34,
+            top: controlProvider.leftPosition.dy * screenSize.height - 34,
+            child: _modernButton(
+              icon: Icons.keyboard_arrow_left,
+              onPressed: onLeft,
+              tooltip: 'Left',
+              color: Colors.white.withOpacity(0.4),
+            ),
           ),
-        ),
-        // Up/Down (right corner)
-        Positioned(
-          right: 32,
-          bottom: 48,
-          child: Column(
-            children: [
-              _modernButton(
-                icon: Icons.keyboard_arrow_up,
-                onPressed: onJump,
-                tooltip: 'Jump',
-                color: Colors.white.withOpacity(0.4),
-              ),
-              const SizedBox(height: 24),
-              _modernButton(
-                icon: Icons.keyboard_arrow_down,
-                onPressed: onDown,
-                tooltip: 'Down',
-                color: Colors.white.withOpacity(0.4),
-              ),
-            ],
+        // Right Button
+        if (controlProvider.rightEnabled)
+          Positioned(
+            left: controlProvider.rightPosition.dx * screenSize.width - 34,
+            top: controlProvider.rightPosition.dy * screenSize.height - 34,
+            child: _modernButton(
+              icon: Icons.keyboard_arrow_right,
+              onPressed: onRight,
+              tooltip: 'Right',
+              color: Colors.white.withOpacity(0.4),
+            ),
           ),
-        ),
+        // Jump Button
+        if (controlProvider.jumpEnabled)
+          Positioned(
+            left: controlProvider.jumpPosition.dx * screenSize.width - 34,
+            top: controlProvider.jumpPosition.dy * screenSize.height - 34,
+            child: _modernButton(
+              icon: Icons.keyboard_arrow_up,
+              onPressed: onJump,
+              tooltip: 'Jump',
+              color: Colors.white.withOpacity(0.4),
+            ),
+          ),
+        // Down Button
+        if (controlProvider.downEnabled)
+          Positioned(
+            left: controlProvider.downPosition.dx * screenSize.width - 34,
+            top: controlProvider.downPosition.dy * screenSize.height - 34,
+            child: _modernButton(
+              icon: Icons.keyboard_arrow_down,
+              onPressed: onDown,
+              tooltip: 'Down',
+              color: Colors.white.withOpacity(0.4),
+            ),
+          ),
       ],
     );
   }

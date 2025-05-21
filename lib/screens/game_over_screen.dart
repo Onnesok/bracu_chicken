@@ -70,6 +70,8 @@ class GameOverScreen extends StatelessWidget {
                       game.overlays.remove(GameOverScreen.id);
                       await game.reset();
                       game.resumeEngine();
+                      game.overlays.add('PauseButton');
+                      game.overlays.add('ControlButtons');
                     },
                     child: Row(
                       mainAxisSize: MainAxisSize.min,

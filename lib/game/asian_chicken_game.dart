@@ -170,10 +170,10 @@ class AsianChickenGame extends FlameGame with PanDetector, HasCollisionDetection
     }
     chicken = Chicken(chickenImage, characterKey: selectedCharacter);
     if (selectedCharacter == 'classic' || selectedCharacter == 'black' || selectedCharacter == 'dark_brown') {
-      chicken!.position = Vector2(32 + 24, size.y - 60 + 16);
+      chicken!.position = Vector2(size.x / 2, size.y - 60 + 16);
       chicken!.yMax = chicken!.position.y;
     } else if (selectedCharacter == 'chickboy') {
-      chicken!.position = Vector2(32, size.y - 48);
+      chicken!.position = Vector2(size.x / 2, size.y - 48);
       chicken!.yMax = chicken!.position.y;
     }
     add(chicken!);
@@ -374,10 +374,10 @@ class AsianChickenGame extends FlameGame with PanDetector, HasCollisionDetection
     }
     chicken = Chicken(chickenImage, characterKey: selectedCharacter);
     if (selectedCharacter == 'classic' || selectedCharacter == 'black' || selectedCharacter == 'dark_brown') {
-      chicken!.position = Vector2(32 + 24, size.y - 60 + 16);
+      chicken!.position = Vector2(size.x / 2, size.y - 60 + 16);
       chicken!.yMax = chicken!.position.y;
     } else if (selectedCharacter == 'chickboy') {
-      chicken!.position = Vector2(32, size.y - 48);
+      chicken!.position = Vector2(size.x / 2, size.y - 48);
       chicken!.yMax = chicken!.position.y;
     }
     add(chicken!);

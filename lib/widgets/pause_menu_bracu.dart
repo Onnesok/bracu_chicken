@@ -58,6 +58,7 @@ class PauseMenuBracu extends StatelessWidget {
                 onPressed: () {
                   game.overlays.remove(PauseMenuBracu.id);
                   game.overlays.add('PauseButton');
+                  game.overlays.add('ControlButtons');
                   game.resumeEngine();
                 },
                 child: Row(
