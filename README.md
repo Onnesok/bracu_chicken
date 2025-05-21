@@ -10,6 +10,10 @@ Asian Chicken is a 2D endless runner game built with Flutter and the Flame game 
 - Pause, settings, and level selection menus
 - High score tracking
 - Responsive controls (swipe and tap)
+- Customizable Control Buttons:
+  - Drag and drop the Jump, Down, Left, and Right buttons to any position on the screen using the in-game Button Settings UI.
+  - Button positions are saved and persist across app restarts.
+  - Default layout prevents button overlap and is optimized for landscape play.
 
 ## Screenshots
 
@@ -138,6 +142,27 @@ asian_chicken/
 - **Backgrounds:** Change in settings or via `BackgroundProvider`
 - **Characters:** Select from the character selection screen
 - **Levels:** Choose difficulty/level from the level selection screen
+- **Control Buttons:** Customize button positions and layout
+- **Persistent Button Settings:** Save button positions across app restarts
+
+## Setup Instructions
+
+1. **Assets:**
+   - Place your background image at `assets/images/background.png`.
+   - Ensure all other required images (chicken sprites, parallax layers, etc.) are in the correct `assets/images/` subfolders.
+   - Update your `pubspec.yaml` to include all asset paths.
+
+2. **Dependencies:**
+   - This project uses [Flame](https://pub.dev/packages/flame), [Provider](https://pub.dev/packages/provider), and [shared_preferences](https://pub.dev/packages/shared_preferences).
+   - Make sure to run `flutter pub get` after cloning or updating dependencies.
+
+3. **Persistent Button Settings:**
+   - Button positions are stored using `SharedPreferences`.
+   - No extra setup is needed; settings are saved automatically when you tap Save or Reset in the Button Settings screen.
+
+4. **Running the Game:**
+   - Run with `flutter run` on your preferred device or emulator.
+   - Use the in-game settings to adjust controls and other preferences.
 
 ## Testing
 - Basic widget test included in `test/widget_test.dart`
@@ -152,3 +177,7 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 - [Flame Engine](https://flame-engine.org/)
 - [Flutter](https://flutter.dev/)
 - Audio and some assets from [Tim Beek](https://timbeek.itch.io/),  [mikiz](https://mikiz.itch.io/) and [Arks](https://arks.itch.io/)
+
+## Support
+
+For issues or feature requests, please open an issue on the repository.
