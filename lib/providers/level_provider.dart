@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class LevelProvider extends ChangeNotifier {
-  String _selectedLevel = 'easy'; // Default level
+  String _selectedLevel = 'easy';
 
   String get selectedLevel => _selectedLevel;
 

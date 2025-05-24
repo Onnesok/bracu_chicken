@@ -13,7 +13,6 @@ class WelcomeScreen extends StatefulWidget {
 }
 
 class _WelcomeScreenState extends State<WelcomeScreen> {
-  // Add a list of available characters (key, image asset, label)
   final List<Map<String, String>> characters = [
     {
       'key': 'chickboy',
@@ -35,7 +34,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
       'image': 'assets/images/chicken/Chicken_Sprite_Sheet_Dark_Brown.png',
       'label': 'Dark Brown',
     },
-    // Add more characters here if needed
   ];
   String selectedCharacter = 'chickboy';
 

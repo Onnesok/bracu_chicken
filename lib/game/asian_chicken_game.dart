@@ -121,8 +121,6 @@ class AsianChickenGame extends FlameGame with PanDetector, HasCollisionDetection
         ParallaxImageData('parallax/forest1/[CelesteHa]ForestP-front.png'),
         ParallaxImageData('parallax/forest1/[CelesteHa]ForestP-foreground.png'),
       ];
-      // Move the forest1 ground up by applying a y offset to the parallax
-      // (Assume the last layer is the ground)
       // We'll set the parallax position after creation
     } else if (background == 'classic') {
       parallaxLayers = [
